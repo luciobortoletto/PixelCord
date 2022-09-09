@@ -7,7 +7,21 @@
   <body>
     <img src="Senza titolo-1.png" width="128" height="128"><h1>PixelCord</h1>
     <h2>IP del server: pixelcord.hopto.org</h2>
-    <div id=’server status’></div>
+    <script src="http://mcapi.org/scripts/minecraft.js"></script>
+    <div class="server-status">
+      Il server è: <span class="server-online"></span>!
+    </div>
+    <script>
+      MinecraftAPI.getServerStatus('pixelcord.hopto.org', {
+      }, function (err, status) {
+        if (err) {
+          return document.querySelector('.server-status').innerHTML = 'Error loading status';
+        }
+
+        // you can change these to your own message!
+        document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+      });
+    </script>
     <a href="http://pixelcord.hopto.org:8080">Mappa del server in 3D (a volte offline)</a>
   </body>
 </html>
