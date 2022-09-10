@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sito ufficiale PixelCord</title>
-  <script src="http://mcapi.org/scripts/minecraft.js"></script>
-</head>
-  <body>
-    <img src="Senza titolo-1.png" width="256" height="256"><h1>PixelCord</h1>
-    <h2>IP del server: pixelcord.hopto.org</h2>
-    <div class="server-status">
-      Il server è: <span class="server-online"></span>!
-    </div>
-    <script>
-      MinecraftAPI.getServerStatus('pixelcord.hopto.org', {
-      }, function (err, status) {
-        if (err) {
-          return document.querySelector('.server-status').innerHTML = 'Si è verificato un errore';
-        }
-
-        // you can change these to your own message!
-        document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'offline';
-      });
-    </script>
-    <a href="http://pixelcord.hopto.org:8080">Mappa del server in 3D (a volte offline)</a>
+  <head>
+    <title>Sito ufficiale PixelCord</title>
+  </head>
+  <body style="background-color:rgb(30, 30, 30);">
+    <img src="logo.png" width="128" alt="logo">
+    <h1 style="color:whitesmoke">PixelCord</h1>
+    <h2 style="color:whitesmoke">IP del server (Java Edition):</h2>
+    <a style="font-size:24px" href="https://www.mcstatus.io/status/java/pixelcord.hopto.org">pixelcord.hopto.org</a>
   </body>
 </html>
